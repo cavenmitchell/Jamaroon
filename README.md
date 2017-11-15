@@ -1,25 +1,26 @@
-# ReduxSimpleStarter
+# Jamaroon
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This project was formed from ReduxSimpleStarter https://github.com/StephenGrider/ReduxSimpleStarter.git because I liked it as a clean boilerplate i could use for future projects.
 
-### Getting Started
-
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
+#### Setup
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
+> git clone https://github.com:cavenmitchell/Jamaroon.git
+> cd Jamaroon
 > npm install
 > npm start
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+#### Defaults
+Default port is 8090, just because everyone uses 8080 and it's annoying.
+
+Want to change it back? Edit package.json and change the "start" key in "scripts"
 
 ```
-> npm install
-> npm start
+"scripts": {
+  "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8090",
+  "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+  "test:watch": "npm run test -- --watch"
+}
 ```
