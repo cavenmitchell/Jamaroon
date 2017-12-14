@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise';
+
 import Bio from './bio';
 import ContactHeadline from './contact_headline';
 import ContactPostButton from './contact_post_button';
@@ -11,6 +14,8 @@ import NameInput from './name_input';
 import ProfilePhoto from './profile_photo';
 import SocialMediaList from './social_media_list';
 import VisitButton from './visit_button';
+
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
 
 export default class App extends Component {
   constructor (props) {
