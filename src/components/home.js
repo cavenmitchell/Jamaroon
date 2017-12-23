@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
 import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
+import { FormattedMessage } from 'react-intl';
 
 import Bio from './bio';
 import ContactHeadline from './contact_headline';
@@ -51,6 +51,7 @@ export default class Home extends Component {
           </div>
         </div>
         <hr className="col-md-12" />
+        <h1><FormattedMessage id="app.hello_world" defaultMessage="Hello World!" description="Hello World header greeting" /></h1>
         <div className="row">
           <ContactHeadline />
           <NameInput />
