@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import { FormattedMessage } from 'react-intl';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Bio from './bio';
 import ContactHeadline from './contact_headline';
@@ -46,7 +47,9 @@ export default class Home extends Component {
           <div className="col-md-6">
             <NameHeadline />
             <Bio />
-            <VisitButton />
+            <MuiThemeProvider>
+              <VisitButton />
+            </MuiThemeProvider>
             <SocialMediaList socialMedia={this.state.socialMedia} />
           </div>
         </div>

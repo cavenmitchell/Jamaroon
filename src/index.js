@@ -15,7 +15,9 @@ import Features from './components/features';
 import reducers from './reducers';
 
 acceptLanguage.languages(['en', 'ja', 'jp']);
+
 const locale = Cookie.get('locale') || 'ja';
+Cookie.set('locale', locale === 'en' ? 'ja' : 'en');
 
 fetch(`./src/assets/translations/${locale}.json`)
   .then((res) => {
