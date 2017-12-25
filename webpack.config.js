@@ -1,3 +1,6 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -22,5 +25,13 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: './build/lang',
+        to: './src/assets/translations'
+      }
+    ])
+  ]
 };

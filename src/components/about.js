@@ -5,7 +5,7 @@ import promiseMiddleware from 'redux-promise';
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
 
-export default class App extends Component {
+export default class About extends Component {
   constructor (props) {
     super(props);
 
@@ -24,6 +24,12 @@ export default class App extends Component {
   }
 
   render () {
-    return this.props.children;
+    return (
+      <div>
+        <h1>ABOUT SECTION</h1>
+        <hr />
+        <div>This is the about section</div>
+      </div>
+    );
   }
 }
